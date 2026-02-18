@@ -3,12 +3,14 @@
 ## ⚡ 5-Minute Quick Start
 
 ### Step 1: Create GitHub Repository
+
 - Go to https://github.com/new
 - Name: **Portfolio**
 - Make it **Public**
 - Create repository
 
 ### Step 2: Push Your Code
+
 ```bash
 cd "C:\Users\Muhammad Jawad\My Portfolio"
 
@@ -21,6 +23,7 @@ git push -u origin main
 ```
 
 ### Step 3: Deploy on Vercel
+
 1. Visit https://vercel.com
 2. Click "New Project"
 3. Select your Portfolio repository
@@ -47,6 +50,7 @@ Before pushing to GitHub, customize your portfolio:
 ## ✅ Verification Checklist
 
 Before GitHub push:
+
 - [ ] `npm run build` - Successful
 - [ ] `npm run lint` - Zero errors
 - [ ] `git status` - Working tree clean
@@ -55,6 +59,7 @@ Before GitHub push:
 ## 🚀 Deploy Without Vercel
 
 Alternative hosting options:
+
 - **GitHub Pages**: Free
 - **Netlify**: Free tier available
 - **AWS S3 + CloudFront**: Low cost

@@ -65,7 +65,7 @@ export default function Footer() {
               © {new Date().getFullYear()} Muhammad Jawad. All rights reserved.
             </p>
             <p className="text-sm text-muted flex items-center gap-1">
-              Made with <Heart className="w-4 h-4 text-red-500 fill-red-500" /> in Pakistan
+              Made with <Heart className="w-4 h-4 text-red-500 fill-red-500" />
             </p>
             <button
               onClick={scrollToTop}

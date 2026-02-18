@@ -9,6 +9,7 @@
 ✅ **Status**: Working tree clean
 
 ### Commits Created:
+
 1. `161e07f` - Initial commit: Production-ready portfolio website
 2. `c3cde4a` - docs: Add deployment and action guides
 
@@ -27,6 +28,7 @@
 4. Click **Create repository**
 
 ### Expected Result
+
 You'll see a page with commands. Ignore those - use commands below instead.
 
 ---
@@ -49,6 +51,7 @@ git push -u origin main
 ```
 
 ### Example (if your username is "jawadking"):
+
 ```bash
 git remote add origin https://github.com/jawadking/Portfolio.git
 git push -u origin main
@@ -67,6 +70,7 @@ git branch -a
 ```
 
 Expected output:
+
 ```
 c3cde4a docs: Add deployment and action guides
 161e07f Initial commit: Production-ready portfolio website
@@ -131,18 +135,23 @@ Note: `node_modules/`, `dist/`, `.next/` are in `.gitignore` ✅
 ## 🔑 Important Notes
 
 ### SSH vs HTTPS
+
 - **HTTPS URL** (recommended): `https://github.com/YOUR_USERNAME/Portfolio.git`
 - **SSH URL** (if configured): `git@github.com:YOUR_USERNAME/Portfolio.git`
 
 This guide uses HTTPS which works without SSH key setup.
 
 ### First Push
+
 The `-u origin main` flag:
+
 - Sets `origin/main` as the default upstream branch
 - Future pushes can just use: `git push`
 
 ### Future Updates
+
 After first push, simply:
+
 ```bash
 git add .
 git commit -m "Your message"
@@ -156,22 +165,26 @@ Vercel will automatically deploy on every push! 🚀
 ## ❌ Troubleshooting
 
 ### Error: "fatal: remote origin already exists"
+
 ```bash
 git remote remove origin
 git remote add origin https://github.com/YOUR_USERNAME/Portfolio.git
 ```
 
 ### Error: "could not read Username"
+
 - Make sure you're using HTTPS URLs (not SSH)
 - Enter your GitHub username and personal access token when prompted
 - Or use: `git config credential.helper store`
 
 ### Error: "Repository not found"
+
 - Verify you created the GitHub repository
 - Check username in URL is correct
 - Ensure repository is set to Public
 
 ### Push seems stuck
+
 - Press Ctrl+C to cancel
 - Check internet connection
 - Try again in 30 seconds

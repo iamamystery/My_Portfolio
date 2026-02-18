@@ -3,6 +3,7 @@
 ## Pre-Deployment Verification
 
 All checks have been completed:
+
 - ✅ Build: PASSED
 - ✅ Linting: PASSED (0 errors, 0 warnings)
 - ✅ TypeScript: PASSED (0 errors)
@@ -45,6 +46,7 @@ git push -u origin main
 ## Custom Domain (Optional)
 
 After deployment:
+
 1. Go to Vercel Dashboard
 2. Settings → Domains
 3. Add your custom domain
