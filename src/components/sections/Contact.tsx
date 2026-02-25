@@ -36,10 +36,38 @@ export default function Contact() {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setSubmitStatus('error');
+        console.error('Failed to send message:', data.error);
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+      console.error('Error sending message:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -198,12 +226,34 @@ export default function Contact() {
                   />
                 </div>
 
+                {submitStatus === 'success' && (
+                  <div className="mb-4 p-4 rounded-xl bg-green-500/20 border border-green-500/50 text-green-400">
+                    Message sent successfully! I'll get back to you soon.
+                  </div>
+                )}
+
+                {submitStatus === 'error' && (
+                  <div className="mb-4 p-4 rounded-xl bg-red-500/20 border border-red-500/50 text-red-400">
+                    Failed to send message. Please try again or contact me directly via email.
+                  </div>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full btn-primary flex items-center justify-center gap-2 py-4"
+                  disabled={isSubmitting}
+                  className="w-full btn-primary flex items-center justify-center gap-2 py-4 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  <Send className="w-4 h-4" />
-                  Send Message
+                  {isSubmitting ? (
+                    <>
+                      <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-4 h-4" />
+                      Send Message
+                    </>
+                  )}
                 </button>
               </form>
             </motion.div>
