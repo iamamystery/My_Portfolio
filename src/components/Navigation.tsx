@@ -62,7 +62,7 @@ export default function Navigation() {
               href="#contact"
               className="hidden md:inline-flex btn-primary text-sm py-2 px-6"
             >
-              Hire Me
+              Quick Chat
             </a>
 
             <button
@@ -122,7 +122,7 @@ export default function Navigation() {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="btn-primary text-center mt-4"
                 >
-                  Hire Me
+                  Quick Chat
                 </a>
               </div>
             </motion.div>

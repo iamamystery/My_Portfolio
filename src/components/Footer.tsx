@@ -1,20 +1,18 @@
 "use client";
 
-import { Github, Linkedin, Twitter, Instagram, Heart, Crown, ArrowUp } from "lucide-react";
+import { Github, Linkedin, Heart, Crown, ArrowUp, User, FolderGit, Wrench, Briefcase, Mail } from "lucide-react";
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-  { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-  { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
+  { icon: Github, href: "https://github.com/iamamystery", label: "GitHub" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/muhammad-jawad-a563b03b1/", label: "LinkedIn" },
 ];
 
 const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#projects", label: "Projects" },
-  { href: "#skills", label: "Skills" },
-  { href: "#experience", label: "Experience" },
-  { href: "#contact", label: "Contact" },
+  { href: "#about", label: "About", icon: User },
+  { href: "#projects", label: "Projects", icon: FolderGit },
+  { href: "#skills", label: "Skills", icon: Wrench },
+  { href: "#experience", label: "Experience", icon: Briefcase },
+  { href: "#contact", label: "Contact", icon: Mail },
 ];
 
 export default function Footer() {
@@ -53,8 +51,9 @@ export default function Footer() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-muted hover:text-white transition-colors"
+                className="inline-flex items-center gap-2 text-muted hover:text-white transition-colors"
               >
+                <link.icon className="w-4 h-4" />
                 {link.label}
               </a>
             ))}

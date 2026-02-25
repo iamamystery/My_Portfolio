@@ -3,35 +3,27 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Mail, MapPin, Phone, Send, Github, Linkedin, Twitter, Instagram } from "lucide-react";
+import { Mail, MapPin, Send, Github, Linkedin, Twitter, Instagram, ArrowRight } from "lucide-react";
 import { fadeInUp, staggerContainer } from "@/lib/utils";
 
 const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "contact@muhammadjawad.com",
-    href: "mailto:contact@muhammadjawad.com",
+    value: "jawadforyoukk@gmail.com",
+    href: "mailto:jawadforyoukk@gmail.com",
   },
   {
     icon: MapPin,
     label: "Location",
-    value: "Global - Remote Friendly",
-    href: "#",
-  },
-  {
-    icon: Phone,
-    label: "Phone",
-    value: "Available on Request",
+    value: "Punjab, Pakistan",
     href: "#",
   },
 ];
 
 const socialLinks = [
-  { icon: Github, label: "GitHub", href: "https://github.com", color: "hover:text-gray-400" },
-  { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com", color: "hover:text-blue-500" },
-  { icon: Twitter, label: "Twitter", href: "https://twitter.com", color: "hover:text-sky-500" },
-  { icon: Instagram, label: "Instagram", href: "https://instagram.com", color: "hover:text-pink-500" },
+  { icon: Github, label: "GitHub", href: "https://github.com/iamamystery", color: "hover:text-gray-400" },
+  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/muhammad-jawad-a563b03b1/", color: "hover:text-blue-500" },
 ];
 
 export default function Contact() {
@@ -90,7 +82,7 @@ export default function Contact() {
                     href={item.href}
                     className="flex items-center gap-4 p-4 glass-card rounded-xl hover:border-primary transition-all duration-300 group"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-12 h-12 rounded-xl bg-linear-to-br from-primary to-secondary flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <item.icon className="w-5 h-5 text-white" />
                     </div>
                     <div>
@@ -99,6 +91,23 @@ export default function Contact() {
                     </div>
                   </a>
                 ))}
+              </div>
+
+              {/* LinkedIn CTA Card */}
+              <div className="glass-card rounded-2xl p-6 mb-8">
+                <h4 className="text-xl font-bold mb-3">Prefer a quick chat?</h4>
+                <p className="text-muted mb-4 leading-relaxed">
+                  I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+                </p>
+                <a
+                  href="https://linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-primary hover:text-secondary transition-colors font-medium group"
+                >
+                  Message me on LinkedIn
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </a>
               </div>
 
               <div>

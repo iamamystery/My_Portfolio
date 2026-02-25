@@ -1,15 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Linkedin, Twitter, Instagram, ArrowDown, Sparkles } from "lucide-react";
+import { Github, Linkedin, ArrowDown, Sparkles } from "lucide-react";
 import { fadeInUp, staggerContainer } from "@/lib/utils";
 
 export default function Hero() {
   const socialLinks = [
-    { icon: Github, href: "https://github.com", label: "GitHub" },
-    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-    { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
+    { icon: Github, label: "GitHub", href: "https://github.com/iamamystery", color: "hover:text-gray-400" },
+    { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/muhammad-jawad-a563b03b1/", color: "hover:text-blue-500" },
   ];
 
   return (
