@@ -311,4 +311,4 @@ For issues or questions:
 
 ---
 
-**Built with ❤️ by Muhammad Jawad Ceo and Founder : King Group of Technology | KingDomX**
+**Built with ❤️ by Muhammad Jawad CEO and Founder : Velorium | KingDomX**

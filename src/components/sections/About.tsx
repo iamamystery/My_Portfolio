@@ -14,7 +14,7 @@ export default function About() {
     {
       icon: Target,
       title: "Visionary Leadership",
-      description: "Leading King Group of Technology with a clear vision for digital transformation and technological innovation.",
+      description: "Leading Velorium with a clear vision for digital transformation and technological innovation.",
     },
     {
       icon: Lightbulb,
@@ -57,7 +57,7 @@ export default function About() {
               variants={fadeInUp}
               className="glass-card p-8 glow-hover transition-all duration-500"
             >
-              <h3 className="text-2xl font-bold mb-4">King Group of Technology</h3>
+              <h3 className="text-2xl font-bold mb-4">Velorium</h3>
               <p className="text-muted leading-relaxed mb-4">
                 As CEO and Founder, I lead a premier technology company dedicated to 
                 delivering world-class digital solutions. We specialize in enterprise 

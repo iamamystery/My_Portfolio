@@ -9,7 +9,7 @@ import { fadeInUp, staggerContainer } from "@/lib/utils";
 const experiences = [
   {
     title: "CEO & Founder",
-    company: "King Group of Technology",
+    company: "Velorium",
     period: "2020 - Present",
     description: "Leading a premier technology company delivering world-class digital solutions. Overseeing strategic direction, product development, and client relationships. Managing a team of talented developers and designers.",
     achievements: [

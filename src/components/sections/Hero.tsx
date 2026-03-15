@@ -19,31 +19,12 @@ export default function Hero() {
           animate="animate"
           className="text-center"
         >
-          <motion.div
-            variants={fadeInUp}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-8"
-          >
-            <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-muted">CEO & Founder</span>
-          </motion.div>
-
           <motion.h1
             variants={fadeInUp}
             className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight"
           >
             <span className="gradient-text">Muhammad Jawad</span>
           </motion.h1>
-
-          <motion.div
-            variants={fadeInUp}
-            className="flex flex-wrap items-center justify-center gap-4 mb-8 text-lg md:text-xl text-muted"
-          >
-            <span className="glass-card px-4 py-2 rounded-full">CEO & Founder</span>
-            <span className="text-primary">•</span>
-            <span className="glass-card px-4 py-2 rounded-full">King Group of Technology</span>
-            <span className="text-primary">•</span>
-            <span className="glass-card px-4 py-2 rounded-full">KingDomX</span>
-          </motion.div>
 
           <motion.p
             variants={fadeInUp}

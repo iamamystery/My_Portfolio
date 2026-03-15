@@ -15,12 +15,12 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Muhammad Jawad | CEO & Founder | Full-Stack & SaaS Developer",
-  description: "CEO and Founder of King Group of Technology and Founder of KingDomX. Expert Full-Stack & SaaS Developer specializing in Next.js, React, Node.js, and cloud technologies.",
-  keywords: ["Muhammad Jawad", "Full-Stack Developer", "SaaS Developer", "King Group of Technology", "KingDomX", "Next.js", "React", "Node.js"],
+  description: "CEO and Founder of Velorium and Founder of KingDomX. Expert Full-Stack & SaaS Developer specializing in Next.js, React, Node.js, and cloud technologies.",
+  keywords: ["Muhammad Jawad", "Full-Stack Developer", "SaaS Developer", "Velorium", "KingDomX", "Next.js", "React", "Node.js"],
   authors: [{ name: "Muhammad Jawad" }],
   openGraph: {
     title: "Muhammad Jawad | CEO & Founder | Full-Stack & SaaS Developer",
-    description: "CEO and Founder of King Group of Technology and Founder of KingDomX",
+    description: "CEO and Founder of Velorium and Founder of KingDomX",
     type: "website",
   },
 };
