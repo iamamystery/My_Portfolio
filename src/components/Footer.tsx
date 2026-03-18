@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Linkedin, Heart, Crown, ArrowUp, User, FolderGit, Wrench, Briefcase, Mail } from "lucide-react";
+import { Github, Linkedin, Crown, ArrowUp } from "lucide-react";
 
 const socialLinks = [
   { icon: Github, href: "https://github.com/iamamystery", label: "GitHub" },
@@ -8,11 +8,10 @@ const socialLinks = [
 ];
 
 const navLinks = [
-  { href: "#about", label: "About", icon: User },
-  { href: "#projects", label: "Projects", icon: FolderGit },
-  { href: "#skills", label: "Skills", icon: Wrench },
-  { href: "#experience", label: "Experience", icon: Briefcase },
-  { href: "#contact", label: "Contact", icon: Mail },
+  { href: "#results", label: "Results" },
+  { href: "#services", label: "Services" },
+  { href: "#projects", label: "Work" },
+  { href: "#contact", label: "Contact" },
 ];
 
 export default function Footer() {
@@ -21,59 +20,56 @@ export default function Footer() {
   };
 
   return (
-    <footer className="py-16 px-6">
+    <footer className="py-16 px-6 bg-[#0A0A0A] border-t border-white/8">
       <div className="max-w-6xl mx-auto">
-        <div className="glass-card p-8 md:p-12">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-12">
-            <div className="flex items-center gap-2">
-              <Crown className="w-8 h-8 text-primary" />
-              <span className="text-2xl font-bold">Muhammad Jawad</span>
-            </div>
-
-            <div className="flex items-center gap-6">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-muted hover:text-white hover:bg-white/10 transition-all duration-300"
-                  aria-label={social.label}
-                >
-                  <social.icon className="w-5 h-5" />
-                </a>
-              ))}
-            </div>
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-12">
+          <div className="flex items-center gap-2">
+            <Crown className="w-8 h-8 text-[#C9A24A]" />
+            <span className="text-2xl font-bold text-[#F5F5F5]">Muhammad Jawad</span>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-8 mb-12">
-            {navLinks.map((link) => (
+          <div className="flex items-center gap-6">
+            {socialLinks.map((social) => (
               <a
-                key={link.href}
-                href={link.href}
-                className="inline-flex items-center gap-2 text-muted hover:text-white transition-colors"
+                key={social.label}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-[#111111] border border-white/8 flex items-center justify-center text-[#A0A0A0] hover:text-[#C9A24A] hover:border-[#C9A24A]/30 transition-all duration-300"
+                aria-label={social.label}
               >
-                <link.icon className="w-4 h-4" />
-                {link.label}
+                <social.icon className="w-5 h-5" />
               </a>
             ))}
           </div>
+        </div>
 
-          <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-sm text-muted text-center md:text-left">
-              © {new Date().getFullYear()} Muhammad Jawad. All rights reserved.
-            </p>
-            <p className="text-sm text-muted flex items-center gap-1">
-              Made with <Heart className="w-4 h-4 text-red-500 fill-red-500" />
-            </p>
-            <button
-              onClick={scrollToTop}
-              className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-muted hover:text-white hover:bg-white/10 transition-all duration-300"
-              aria-label="Scroll to top"
+        <div className="flex flex-wrap items-center justify-center gap-8 mb-12">
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="text-sm text-[#A0A0A0] hover:text-[#C9A24A] transition-colors"
             >
-              <ArrowUp className="w-5 h-5" />
-            </button>
-          </div>
+              {link.label}
+            </a>
+          ))}
+        </div>
+
+        <div className="border-t border-white/8 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-[#A0A0A0] text-center md:text-left">
+            © {new Date().getFullYear()} Muhammad Jawad. All rights reserved.
+          </p>
+          <p className="text-sm text-[#A0A0A0]">
+            Built for results.
+          </p>
+          <button
+            onClick={scrollToTop}
+            className="w-10 h-10 rounded-full bg-[#111111] border border-white/8 flex items-center justify-center text-[#A0A0A0] hover:text-[#C9A24A] hover:border-[#C9A24A]/30 transition-all duration-300"
+            aria-label="Scroll to top"
+          >
+            <ArrowUp className="w-5 h-5" />
+          </button>
         </div>
       </div>
     </footer>

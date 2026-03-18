@@ -1,80 +1,103 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Linkedin, ArrowDown, Sparkles } from "lucide-react";
-import { fadeInUp, staggerContainer } from "@/lib/utils";
+import { ArrowRight, ChevronDown } from "lucide-react";
 
 export default function Hero() {
-  const socialLinks = [
-    { icon: Github, label: "GitHub", href: "https://github.com/iamamystery", color: "hover:text-gray-400" },
-    { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/muhammad-jawad-a563b03b1/", color: "hover:text-blue-500" },
-  ];
+  const fadeInUp = {
+    initial: { opacity: 0, y: 30 },
+    animate: { opacity: 1, y: 0 },
+  };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden section-padding">
-      <div className="max-w-6xl mx-auto w-full">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      {/* Content */}
+      <div className="max-w-5xl mx-auto w-full px-6 md:px-12">
         <motion.div
-          variants={staggerContainer}
           initial="initial"
           animate="animate"
+          transition={{ staggerChildren: 0.15 }}
           className="text-center"
         >
-          <motion.h1
-            variants={fadeInUp}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight"
-          >
-            <span className="gradient-text">Muhammad Jawad</span>
-          </motion.h1>
-
+          {/* Pre-headline */}
           <motion.p
             variants={fadeInUp}
-            className="text-xl md:text-2xl text-muted max-w-3xl mx-auto mb-12 leading-relaxed"
+            transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
+            className="text-[#C9A24A] text-sm tracking-[4px] uppercase mb-8"
           >
-            Visionary Full-Stack & SaaS Developer crafting scalable digital solutions 
-            that transform businesses and drive innovation across the globe.
+            Muhammad Jawad • System Architect & Founder
           </motion.p>
 
+          {/* Main Headline */}
+          <motion.h1
+            variants={fadeInUp}
+            transition={{ duration: 1, ease: [0.4, 0, 0.2, 1] }}
+            className="text-4xl md:text-6xl lg:text-7xl font-bold text-[#F5F5F5] leading-[1.1] mb-6"
+          >
+            I Build Systems That
+            <br />
+            <span className="text-gold-gradient">Turn Traffic Into Revenue</span>
+          </motion.h1>
+
+          {/* Subtext */}
+          <motion.p
+            variants={fadeInUp}
+            transition={{ duration: 0.8, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
+            className="text-lg md:text-xl text-[#A0A0A0] max-w-2xl mx-auto mb-12 leading-relaxed"
+          >
+            Automation, lead generation, and full-stack solutions that scale your business 
+            without scaling your workload.
+          </motion.p>
+
+          {/* CTAs */}
           <motion.div
             variants={fadeInUp}
-            className="flex flex-wrap items-center justify-center gap-4 mb-16"
+            transition={{ duration: 0.8, delay: 0.4, ease: [0.4, 0, 0.2, 1] }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <a href="#contact" className="btn-primary inline-flex items-center gap-2">
-              Get In Touch
+            <a
+              href="#projects"
+              className="btn-gold flex items-center gap-2 group"
+            >
+              View Work
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </a>
-            <a href="#projects" className="btn-outline inline-flex items-center gap-2">
-              View Projects
+            <a
+              href="#contact"
+              className="btn-outline"
+            >
+              Book a Call
             </a>
           </motion.div>
 
+          {/* Stats Row */}
           <motion.div
             variants={fadeInUp}
-            className="flex items-center justify-center gap-6"
+            transition={{ duration: 0.8, delay: 0.6, ease: [0.4, 0, 0.2, 1] }}
+            className="flex flex-wrap justify-center gap-8 md:gap-16 mt-20 pt-12 border-t border-white/[0.08]"
           >
-            {socialLinks.map((social) => (
-              <a
-                key={social.label}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full glass-card flex items-center justify-center text-muted hover:text-white hover:border-primary transition-all duration-300 hover:scale-110"
-                aria-label={social.label}
-              >
-                <social.icon className="w-5 h-5" />
-              </a>
-            ))}
+            <div className="text-center">
+              <p className="text-3xl md:text-4xl font-bold text-[#C9A24A]">50+</p>
+              <p className="text-sm text-[#A0A0A0] mt-1">Projects Delivered</p>
+            </div>
+            <div className="text-center">
+              <p className="text-3xl md:text-4xl font-bold text-[#C9A24A]">300%</p>
+              <p className="text-sm text-[#A0A0A0] mt-1">Avg. Revenue Growth</p>
+            </div>
+            <div className="text-center">
+              <p className="text-3xl md:text-4xl font-bold text-[#C9A24A]">10K+</p>
+              <p className="text-sm text-[#A0A0A0] mt-1">Active Users Served</p>
+            </div>
           </motion.div>
         </motion.div>
       </div>
 
-      <motion.a
-        href="#about"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.5, duration: 0.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted hover:text-white transition-colors cursor-pointer"
-      >
-        <ArrowDown className="w-6 h-6 animate-bounce" />
-      </motion.a>
+      {/* Scroll Indicator */}
+      <div className="scroll-indicator">
+        <span>Scroll</span>
+        <div className="line"></div>
+        <ChevronDown className="w-4 h-4 text-[#C9A24A]" />
+      </div>
     </section>
   );
 }

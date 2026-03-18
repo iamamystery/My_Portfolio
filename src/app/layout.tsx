@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import ParticleBackground from "@/components/ParticleBackground";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,13 +13,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Muhammad Jawad | CEO & Founder | Full-Stack & SaaS Developer",
-  description: "CEO and Founder of Velorium and Founder of KingDomX. Expert Full-Stack & SaaS Developer specializing in Next.js, React, Node.js, and cloud technologies.",
-  keywords: ["Muhammad Jawad", "Full-Stack Developer", "SaaS Developer", "Velorium", "KingDomX", "Next.js", "React", "Node.js"],
+  title: "Muhammad Jawad | Automation & Full-Stack Systems for Business Growth",
+  description: "I build systems that turn traffic into revenue. Funnel development, automation systems, and full-stack web apps that scale your business without scaling your workload.",
+  keywords: ["Muhammad Jawad", "Funnel Developer", "Automation Expert", "Full-Stack Developer", "Business Systems", "GoHighLevel", "Next.js", "Revenue Growth"],
   authors: [{ name: "Muhammad Jawad" }],
   openGraph: {
-    title: "Muhammad Jawad | CEO & Founder | Full-Stack & SaaS Developer",
-    description: "CEO and Founder of Velorium and Founder of KingDomX",
+    title: "Muhammad Jawad | Systems That Turn Traffic Into Revenue",
+    description: "Automation, lead generation, and full-stack solutions that scale your business without scaling your workload.",
     type: "website",
   },
 };
@@ -35,7 +34,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ParticleBackground />
+        {/* Luxury Background */}
+        <div className="luxury-bg"></div>
+        <div className="noise-overlay"></div>
         {children}
       </body>
     </html>

@@ -5,11 +5,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Crown } from "lucide-react";
 
 const navLinks = [
+  { href: "#results", label: "Results" },
+  { href: "#services", label: "Services" },
+  { href: "#projects", label: "Work" },
+  { href: "#authority", label: "Reviews" },
   { href: "#about", label: "About" },
-  { href: "#projects", label: "Projects" },
-  { href: "#skills", label: "Skills" },
-  { href: "#experience", label: "Experience" },
-  { href: "#contact", label: "Contact" },
 ];
 
 export default function Navigation() {
@@ -31,17 +31,13 @@ export default function Navigation() {
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? "py-4" : "py-6"
+          isScrolled ? "py-3 nav-luxury" : "py-5"
         }`}
       >
         <div className="max-w-6xl mx-auto px-6">
-          <nav
-            className={`flex items-center justify-between px-6 py-4 rounded-2xl transition-all duration-300 ${
-              isScrolled ? "glass-card" : ""
-            }`}
-          >
-            <a href="#" className="flex items-center gap-2 font-bold text-xl">
-              <Crown className="w-6 h-6 text-primary" />
+          <nav className="flex items-center justify-between">
+            <a href="#" className="flex items-center gap-2 font-bold text-xl text-[#F5F5F5]">
+              <Crown className="w-6 h-6 text-[#C9A24A]" />
               <span className="hidden sm:inline">Muhammad Jawad</span>
             </a>
 
@@ -50,24 +46,24 @@ export default function Navigation() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-sm font-medium text-muted hover:text-white transition-colors relative group"
+                  className="text-sm font-medium text-[#A0A0A0] hover:text-[#C9A24A] transition-colors relative group"
                 >
                   {link.label}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
+                  <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-[#C9A24A] group-hover:w-full transition-all duration-300" />
                 </a>
               ))}
             </div>
 
             <a
               href="#contact"
-              className="hidden md:inline-flex btn-primary text-sm py-2 px-6"
+              className="hidden md:inline-flex btn-gold text-sm py-2 px-6"
             >
-              Quick Chat
+              Book a Call
             </a>
 
             <button
               onClick={() => setIsMobileMenuOpen(true)}
-              className="md:hidden w-10 h-10 flex items-center justify-center"
+              className="md:hidden w-10 h-10 flex items-center justify-center text-[#F5F5F5]"
               aria-label="Open menu"
             >
               <Menu className="w-6 h-6" />
@@ -85,7 +81,7 @@ export default function Navigation() {
             className="fixed inset-0 z-50 md:hidden"
           >
             <div
-              className="absolute inset-0 bg-black/80 backdrop-blur-sm"
+              className="absolute inset-0 bg-black/90 backdrop-blur-sm"
               onClick={() => setIsMobileMenuOpen(false)}
             />
             <motion.div
@@ -93,13 +89,13 @@ export default function Navigation() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="absolute right-0 top-0 bottom-0 w-80 max-w-full glass-card p-6"
+              className="absolute right-0 top-0 bottom-0 w-80 max-w-full bg-[#111111] border-l border-white/8 p-6"
             >
               <div className="flex items-center justify-between mb-8">
-                <span className="font-bold text-xl">Menu</span>
+                <span className="font-bold text-xl text-[#F5F5F5]">Menu</span>
                 <button
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="w-10 h-10 flex items-center justify-center"
+                  className="w-10 h-10 flex items-center justify-center text-[#F5F5F5]"
                   aria-label="Close menu"
                 >
                   <X className="w-6 h-6" />
@@ -112,7 +108,7 @@ export default function Navigation() {
                     key={link.href}
                     href={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-lg font-medium py-3 px-4 rounded-xl hover:bg-white/5 transition-colors"
+                    className="text-lg font-medium py-3 px-4 text-[#A0A0A0] hover:text-[#C9A24A] rounded transition-colors"
                   >
                     {link.label}
                   </a>
@@ -120,9 +116,9 @@ export default function Navigation() {
                 <a
                   href="#contact"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="btn-primary text-center mt-4"
+                  className="btn-gold text-center mt-4"
                 >
-                  Quick Chat
+                  Book a Call
                 </a>
               </div>
             </motion.div>
@@ -132,3 +128,4 @@ export default function Navigation() {
     </>
   );
 }
+
